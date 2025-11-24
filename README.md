@@ -2,18 +2,30 @@
 
 This is an alternative view to Workloads/Workload Views within New Relic, that is more simple/management friendly.
 
+## Features
+* In-app, persisted configuration
+* One click drilldown into individual workloads
+* Customizable, persisted group titles (aliases) per user (each user can have their own unique aliases to any given group)
+
 ## Pre-requirements
 
 * Workload of workloads - A parent workload that contains child workloads, and those child workloads tagged with a useful grouping attribute (i.e - Tier,Service,Criticality)
 
-
 ## Configuration
 
-Input the following into `config.json` before serving/publishing:
+### Required Local Config
 
-* parentWorkloadGuid: The guid of the parent workload entity, that contains all child workloads
-* groupByTag: The tag that exists on all child workloads, for grouping.
+Input an `accountId` into [config.json](nerdlets/shared/config.json) before serving/publishing. This is required as it will be the account in which settings are stored against. Therefore, any users should also have access to this account that wish to use the app.
 
+### In-Application Config
+Once the app is published/served, a one-time configuration is required to be filled out that includes:
+
+* Parent Workload GUID* - This is the entityGuid of the parent workload that contains all other child workloads that are tagged with a common grouping attribute.
+* Tag to Group By* - Key of the tag that resides on all child workloads. This will be the grouping mechanism.
+* Refresh Rate (seconds) - The rate in which data will be refreshed automatically on the screen.
+* Header Title - Custom title of view. Defaults to `Leadership View`
+
+**\* = REQUIRED**
 
 ## Example
 

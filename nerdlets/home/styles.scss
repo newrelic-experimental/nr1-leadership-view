@@ -1,1 +1,21 @@
 @import url('//cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css');
+
+.action-buttons {
+    padding-top: 16px;
+}
+
+.settings {
+    float: right;
+}
+
+.group-header {
+    display: flex;
+    align-items: center;
+    gap: 8;
+    cursor: default;
+}
+
+.edit-icon {
+    cursor: pointer;
+    margin-left: 8px;
+}
