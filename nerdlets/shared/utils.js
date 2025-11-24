@@ -98,7 +98,7 @@ export const fetchWorkloadStatus = async (guid, cursor) => {
 };
 
 export const fetchRemoteConfig = async (accountId) => {
-  const collection = STORAGE.ACCOUNT_CONFIG_COLLECTION; //TODO: move to constants
+  const collection = STORAGE.ACCOUNT_CONFIG_COLLECTION;
   const documentId = STORAGE.ACCOUNT_CONFIG_COLLECTION;
 
   const { error, data } = await AccountStorageQuery.query({
@@ -116,7 +116,7 @@ export const fetchRemoteConfig = async (accountId) => {
 };
 
 export const writeRemoteConfig = async (config, accountId) => {
-  const collection = STORAGE.ACCOUNT_CONFIG_COLLECTION; //TODO: move to constants
+  const collection = STORAGE.ACCOUNT_CONFIG_COLLECTION;
   const documentId = STORAGE.ACCOUNT_CONFIG_DOC_ID;
 
   const { error } = await AccountStorageMutation.mutate({
@@ -136,7 +136,7 @@ export const writeRemoteConfig = async (config, accountId) => {
 };
 
 export const fetchUserPrefs = async () => {
-  const collection = STORAGE.USER_CONFIG_COLLECTION; //TODO: move to constants
+  const collection = STORAGE.USER_CONFIG_COLLECTION;
   const documentId = STORAGE.USER_CONFIG_DOC_ID;
 
   const { error, data } = await UserStorageQuery.query({
@@ -157,7 +157,7 @@ export const fetchUserPrefs = async () => {
 };
 
 export const writeUserPrefs = async (newPref, existingPrefs) => {
-  const collection = STORAGE.USER_CONFIG_COLLECTION; //TODO: move to constants
+  const collection = STORAGE.USER_CONFIG_COLLECTION;
   const documentId = STORAGE.USER_CONFIG_DOC_ID;
   const currentGroups = existingPrefs?.groups || [];
 
