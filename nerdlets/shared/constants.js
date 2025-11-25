@@ -21,8 +21,8 @@ export const ERROR = {
 };
 
 export const STORAGE = {
-  ACCOUNT_CONFIG_COLLECTION: 'leadership-view-v1-test',
-  ACCOUNT_CONFIG_DOC_ID: 'leadership-doc-v1-test',
-  USER_CONFIG_COLLECTION: 'user-prefs-v1-test',
-  USER_CONFIG_DOC_ID: 'user-prefs-doc-v1-test',
+  ACCOUNT_CONFIG_COLLECTION: 'leadership-view-v1',
+  ACCOUNT_CONFIG_DOC_ID: 'leadership-doc-v1',
+  USER_CONFIG_COLLECTION: 'user-prefs-v1',
+  USER_CONFIG_DOC_ID: 'user-prefs-doc-v1',
 };

@@ -99,7 +99,7 @@ export const fetchWorkloadStatus = async (guid, cursor) => {
 
 export const fetchRemoteConfig = async (accountId) => {
   const collection = STORAGE.ACCOUNT_CONFIG_COLLECTION;
-  const documentId = STORAGE.ACCOUNT_CONFIG_COLLECTION;
+  const documentId = STORAGE.ACCOUNT_CONFIG_DOC_ID;
 
   const { error, data } = await AccountStorageQuery.query({
     accountId,
